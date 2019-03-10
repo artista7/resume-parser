@@ -54,27 +54,15 @@ def extract_phone_num(text):
                             if int(x.strip()[-4:]) in range(1900, 2100):
                                 match.remove(el)
                     except:
-                        print("ERRPR")
                         pass
         except:
-            print("ERRPR")
             pass
         number = match
     except:
-        print("ERRPR1")
         pass
     return number
 
 def extract_email(text):
-    print(text)
     pattern = re.compile(EMAIL_PATTERN)
     match = pattern.findall(text)
     return match[0].strip() if match else None
-
-
-if __name__ == '__main__':
-    text = "vivekverma239@gmail.com\n +91-8750888183"
-    print(extract_email(text))
-    print(extract_phone_num(text))
-    text = "Vivek Verma\n IIT-D"
-    print(get_names(text))

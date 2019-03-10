@@ -7,19 +7,17 @@ from modules.parser.pdf_parser import PDFParser
 def main(resume_file):
     parser = PDFParser(resume_file)
     spell_checker = SpellChecker()
+    possible_spelling_errors = spell_checker.check_misspelled(parser.text)
     parsed_dict = {"email": parser.email,
                    "name": parser.name,
                    "phone_no": parser.phone,
-                   "sections": parser.sections}
-    # for section in parsed_dict["sections"]:
-    #     from pprint import pprint
-    #     pprint(spell_checker.check_misspelled(section['text']))
+                   "sections": parser.sections,
+                   "possible_spelling_errors":possible_spelling_errors}
     return parsed_dict
 
 
 
 if __name__ == '__main__':
-    from pprint import pprint
-    pprint(fire.Fire(main))
+    fire.Fire(main)
     # parsed_info = main("test/sample-resume.pdf")
     # pprint(parsed_info)

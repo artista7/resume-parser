@@ -13,6 +13,7 @@ class PDFParser:
     def __init__(self, file_name):
         self.file_name = file_name
         self.xml = convert_pdf(self.file_name, format='xml')  + "</pages>"
+        self.text = convert_pdf(self.file_name, format='text')
         self.root = ET.fromstring(self.xml)
         self._parse_xml()
         self.name = extract_name(self.sections[0]['text'])
