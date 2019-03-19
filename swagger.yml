@@ -1,0 +1,41 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST API for Resume Parsing
+consumes:
+  - "multipart/form-data"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /analyze_resume:
+    post:
+      operationId: "app.upload_file"
+      tags:
+        - "File Upload"
+      summary: "Upload resume file to parse"
+      description: "Upload resume file to parse"
+      consumes:
+         - multipart/form-data
+      parameters:
+         - in: formData
+           name: file
+           type: file
+           description: The file to upload.
+      responses:
+        200:
+          description: "Successful read people list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                fname:
+                  type: "string"
+                lname:
+                  type: "string"
+                timestamp:
+                  type: "string"
