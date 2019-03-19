@@ -5,6 +5,6 @@ flask
 connexion
 connexion[swagger-ui]
 networkx
-pdfminer
+pdfminer.six
 lxml
 gunicorn
