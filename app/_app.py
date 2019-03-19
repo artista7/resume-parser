@@ -3,14 +3,6 @@ import spacy
 from modules.spellchecker import SpellChecker
 from modules.parser.pdf_parser import PDFParser
 
-# from flask import Flask
-# app = Flask(__name__)
-#
-# @app.route("/")
-# def home():
-#     return "Hello, World!"
-
-
 import os
 from flask import Flask, flash, request, redirect, url_for, jsonify
 from werkzeug.utils import secure_filename

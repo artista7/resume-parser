@@ -14,7 +14,7 @@ basePath: "/api"
 paths:
   /analyze_resume:
     post:
-      operationId: "app.upload_file"
+      operationId: "app.swagger_app.upload_file"
       tags:
         - "File Upload"
       summary: "Upload resume file to parse"
