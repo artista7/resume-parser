@@ -3,7 +3,6 @@ nltk
 pyspellchecker
 spacy
 flask
-connexion
 connexion[swagger-ui]
 networkx
 pdfminer.six
