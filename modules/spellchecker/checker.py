@@ -1,6 +1,6 @@
 from nltk import word_tokenize
 from spellchecker import SpellChecker as Checker
-from pylanguagetool import init_config, api, print_errors
+# from pylanguagetool import init_config, api, print_errors
 
 
 class SpellChecker():
