@@ -6,3 +6,4 @@ connexion[swagger-ui]
 networkx
 pdfminer
 lxml
+gunicorn
