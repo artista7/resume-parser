@@ -4,6 +4,7 @@ pyspellchecker
 spacy
 flask
 connexion[swagger-ui]
+swagger_ui_bundle
 networkx
 pdfminer.six
 lxml
