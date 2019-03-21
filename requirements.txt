@@ -1,7 +1,6 @@
 fire
 nltk
 pyspellchecker
-spacy
 flask
 connexion[swagger-ui]
 swagger_ui_bundle

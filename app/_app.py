@@ -1,5 +1,4 @@
 import fire
-import spacy
 from modules.spellchecker import SpellChecker
 from modules.parser.pdf_parser import PDFParser
 
